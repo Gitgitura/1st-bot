@@ -1,8 +1,14 @@
 from telethon import TelegramClient, events
+import os
+from dotenv import load_dotenv
 
-BOT_TOKEN = ''
-API_ID = 
-API_HASH = ''
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+API_ID = os.getenv('API_ID')
+API_HASH = os.getenv('API_HASH')
+
 
 bot = TelegramClient('bot', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
@@ -27,7 +33,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    # Bind to PORT if defined, otherwise default to 5000.
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
-
