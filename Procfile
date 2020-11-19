@@ -1,2 +1,2 @@
   
-web: python repeater_bot.py
+bot: python repeater_bot.py
